@@ -135,7 +135,7 @@ If you have found a bug or if you have a feature request, please report them at 
 👤 **Pivindi Nimanga**
 
 -   Github: [nimanga](https://github.com/nimanga-cs19019)
--   LinkedIn: [pivindi_nimanga](https://www.linkedin.com/in/pivindi-nimanga-985713250
+-   LinkedIn: [pivindi_nimanga](https://www.linkedin.com/in/pivindi-nimanga-985713250)
 
 
 👤 **Dulana Dewmin**
