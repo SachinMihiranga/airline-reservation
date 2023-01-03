@@ -24,7 +24,7 @@ git clone https://github.com/MadushaS/airline-reservation.git
 1. install mongodb on your system
 1. Start the server, run mongosh on command-line
 1. create a databese
-1. get connection string of your database
+1. get connection string of your database.
 1. put connection string infront of `spring.data.mongodb.uri` in `src/resources/application.properties`
 
 - Run `AirlineReservationApplication.java` in `src/main/java/AirlineReservationApplication.java`
@@ -142,5 +142,6 @@ If you have found a bug or if you have a feature request, please report them at 
 
 -   Github: [DulanaDewmin](https://github.com/DulanaDewmin)
 -   LinkedIn: [dulana_dewmin](https://www.linkedin.com/in/hewa-dehigahawaththage-dulana-dewmin-0788b21b9)
+
 
 ---
