@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: head(pageTitle=${title})}">
+</head>
+<body class="py-5">
+
+<div th:replace="~{fragments/dashboard/components/nav :: mobile-nav}"></div>
+<div class="flex mt-[4.7rem] md:mt-0">
+    <nav th:replace="~{fragments/dashboard/components/nav :: side-nav}"></nav>
+    <div class="content">
+        <div class="top-bar">
+            <nav th:replace="~{fragments/dashboard/components/top-bar :: breadcrumb}"></nav>
+            <div th:replace="~{fragments/dashboard/components/top-bar :: account-menu}"></div>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12 2xl:col-span-9">
+                <div class="grid grid-cols-12 gap-6">
+                    <div th:replace="~{fragments/dashboard/components/overview :: overview}"></div>
+                    <div th:replace="~{fragments/dashboard/components/active-tickets :: active-tickets}"></div>
+                    <div th:replace="~{fragments/dashboard/components/new-ticket :: new-ticket}"></div>
+                </div>
+            </div>
+            <div class="col-span-12 2xl:col-span-3">
+                <div class="2xl:border-l -mb-10 pb-10">
+                    <div class="2xl:pl-6 grid grid-cols-12 gap-x-6 2xl:gap-x-0 gap-y-6">
+                        <div th:replace="~{fragments/dashboard/components/important-note-panel :: important-notes}"></div>
+                        <div th:replace="~{fragments/dashboard/components/recent_activities :: recent-activities}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:replace="~{fragments/scripts :: script-app}"></script>
+</body>
+</html>

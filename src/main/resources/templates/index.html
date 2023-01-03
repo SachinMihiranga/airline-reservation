@@ -5,14 +5,13 @@
 </head>
 <body>
 
-  <div th:replace="fragments/navbar :: navbar"></div>
-  <div th:replace="fragments/hero :: hero"></div>
-  <div th:replace="fragments/carousel :: carousel"></div>
-  <div th:replace="fragments/carousel :: carousel-options"></div>
-  <div th:replace="fragments/footer :: footer"></div>
+  <div th:replace="~{fragments/navbar :: navbar}"></div>
+  <div th:replace="~{fragments/hero :: hero}"></div>
+  <div th:replace="~{fragments/carousel :: carousel}"></div>
+  <div th:replace="~{fragments/footer :: footer}"></div>
 
-  <script th:replace="fragments/scripts :: script-ads-carousel"></script>
-  <script th:replace="fragments/scripts :: script-nav-menu"></script>
+  <script th:replace="~{fragments/scripts :: script-app}"></script>
+  <script th:replace="~{fragments/scripts :: script-nav-menu}"></script>
 
 </body>
 </html>

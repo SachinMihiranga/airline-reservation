@@ -21,6 +21,19 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests( requests -> requests
+                        .anyRequest().permitAll()
+                )
+                .oauth2Login()
+                .and()
+                .logout(logout -> logout
+                        .deleteCookies("JSESSIONID")
+                        .invalidateHttpSession(true)
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                        .addLogoutHandler(logoutHandler)
+                        .logoutSuccessUrl("/")
+                );
+
+        /*http.authorizeHttpRequests( requests -> requests
                 .requestMatchers("/","/*.png","/*.ico","/*.xml","/*.json","/packages/**","/images/**","/css/**","/js/**").permitAll()
                 .anyRequest().authenticated()
                 )
@@ -32,7 +45,7 @@ public class SecurityConfig {
                             .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                             .addLogoutHandler(logoutHandler)
                             .logoutSuccessUrl("/")
-                    );
+                    );*/
 
         return http.build();
     }

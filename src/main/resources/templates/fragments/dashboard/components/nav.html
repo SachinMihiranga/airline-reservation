@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+
+<div class="mobile-menu md:hidden" th:fragment="mobile-nav">
+    <div class="mobile-menu-bar">
+        <a href="" class="flex mr-auto">
+            <img alt="MyPLODS Logo" class="w-6" th:src="@{/images/logo50w.png}">
+            <span class="text-white text-lg ml-3"> My<span class="text-yellow-500">PLODS</span>
+                </span>
+        </a>
+        <a href="javascript:;" class="mobile-menu-toggler">
+            <i data-lucide="bar-chart-2"
+               class="w-8 h-8 text-white transform -rotate-90"></i>
+        </a>
+    </div>
+    <div class="scrollable">
+        <a title="Menu" href="javascript:;" class="mobile-menu-toggler">
+            <i data-lucide="x-circle"
+               class="w-8 h-8 text-white transform -rotate-90">
+
+            </i>
+        </a>
+        <ul class="scrollable__content py-2">
+            <li>
+                <a th:href="@{/dashboard}" class="menu">
+                    <div class="menu__icon"><i data-lucide="inbox"></i></div>
+                    <div class="menu__title"> Dashboard</div>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/dashboard/flights}" class="menu">
+                    <div class="menu__icon"><i data-lucide="hard-drive"></i></div>
+                    <div class="menu__title"> Flights</div>
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/dashboard/trips}" class="menu">
+                    <div class="menu__icon"><i data-lucide="credit-card"></i></div>
+                    <div class="menu__title"> My Trips</div>
+                </a>
+            </li>
+            <li class="menu__devider my-6"></li>
+            <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon"><i data-lucide="settings"></i></div>
+                    <div class="menu__title"> Settings <i data-lucide="chevron-down" class="menu__sub-icon "></i></div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a th:href="@{/dashboard/settings}" class="menu">
+                            <div class="menu__icon"><i data-lucide="settings-2"></i></div>
+                            <div class="menu__title"> Gerenal</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/dashboard/profile}" class="menu">
+                            <div class="menu__icon"><i data-lucide="user"></i></div>
+                            <div class="menu__title"> Profile</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<nav class="side-nav" aria-label="side navigation" th:fragment="side-nav">
+    <a href="" class="intro-x flex items-center pl-5 pt-4">
+        <img alt="Midone - HTML Admin Template" class="w-6" th:src="@{images/logo50w.png}">
+        <span class="hidden xl:block text-white text-lg ml-3"> My<span class="text-yellow-500">PLODS</span>
+                </span>
+    </a>
+    <div class="side-nav__devider my-6"></div>
+    <ul>
+        <li>
+            <a th:href="@{/dashboard}" class="side-menu side-menu--active">
+                <div class="side-menu__icon"><i data-lucide="home"></i></div>
+                <div class="side-menu__title"> Dashboard</div>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/dashboard/flights}" class="side-menu">
+                <div class="side-menu__icon"><i data-lucide="plane"></i></div>
+                <div class="side-menu__title"> Flights</div>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/dashboard/trips}" class="side-menu">
+                <div class="side-menu__icon"><i data-lucide="activity"></i></div>
+                <div class="side-menu__title"> My Trips</div>
+            </a>
+        </li>
+        <li class="side-nav__devider my-6"></li>
+        <li>
+            <a href="javascript:;" class="side-menu">
+                <div class="side-menu__icon"><i data-lucide="settings"></i></div>
+                <div class="side-menu__title">
+                    Settings
+                    <div class="side-menu__sub-icon "><i data-lucide="chevron-down"></i></div>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a th:href="@{/dashboard/settings}" class="side-menu">
+                        <div class="side-menu__icon"><i data-lucide="settings-2"></i></div>
+                        <div class="side-menu__title"> General</div>
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/dashboard/profile}" class="side-menu">
+                        <div class="side-menu__icon"><i data-lucide="user"></i></div>
+                        <div class="side-menu__title"> Profile</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>
