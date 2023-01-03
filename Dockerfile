@@ -1,10 +1,12 @@
-FROM gradle:jdk19-jammy
+FROM maven:3.8.5-openjdk-17 as maven-builder
+COPY src /app/src
+COPY pom.xml /app
 
-WORKDIR /tmp
-ADD . /tmp
+RUN mvn -f /app/pom.xml clean package -DskipTests
+FROM bellsoft/liberica-openjdk-alpine:17
 
-RUN gradle build
-COPY target/*.jar air-reserveation.jar
-ENTRYPOINT ("java","-jar","/air-reserveation.jar")
+COPY --from=maven-builder app/target/*.jar /app-service/myplods.jar
+WORKDIR /app-service
 
 EXPOSE 8080
+ENTRYPOINT ["java","-jar","myplods.jar"]
