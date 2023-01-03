@@ -1,3 +1,35 @@
+# Airline Reservation System 
+
+Airline reservation system is a full-stack Java application. 
+Technologies that use to project;
+
+- Java/MVN  + Spring boot + MVC Architecture
+- HTML, Tailwind CSS, JS
+- Spring Security, Auth0
+- Intellij IDEA, VS Code
+- MongoDB
+- Docker
+- Git/GitHub
+
+
+# Setup
+
+### To run the app,
+
+- Clone this repo to your local machine using
+```git
+git clone https://github.com/MadushaS/airline-reservation.git
+```
+- Connect database 
+1. install mongodb on your system
+1. Start the server, run mongosh on command-line
+1. create a databese
+1. get connection string of your database.
+1. put connection string infront of `spring.data.mongodb.uri` in `src/resources/application.properties`
+
+- Run `AirlineReservationApplication.java` in `src/main/java/AirlineReservationApplication.java`
+
+
 # Spring Boot 2 Login - MVC
 
 This sample demonstrates:
@@ -16,7 +48,7 @@ This sample demonstrates:
 
 ### Application configuration
 
-Copy `src/main/resources/application.yml.example` to `src/main/resources/application.yml`:
+Copy `src/main/resources/application.yml.` to `src/main/resources/application.yml`:
 
 ```bash
 cp src/main/resources/application.yml.example src/main/resources/application.yml
@@ -27,7 +59,7 @@ Set the application values in the `src/main/resources/application.yml` file to t
 ```yaml
 client-id: {YOUR-CLIENT-ID}
 client-secret: {YOUR-CLIENT-SECRET}
-issuer-uri: https://{YOUR-DOMAIN}/
+issuer-uri: https://{YOUR AUTH0 DOMAIN}/
 ```
 
 ### Running the sample
@@ -74,30 +106,42 @@ The application will be accessible at http://localhost:3000.
 
 If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
-## What is Auth0?
 
-Auth0 helps you to:
+## Authors
 
-* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, amont others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
-* Add authentication through more traditional **[username/password databases](https://docs.auth0.com/mysql-connection-tutorial)**.
-* Add support for **[linking different user accounts](https://docs.auth0.com/link-accounts)** with the same user.
-* Support for generating signed [Json Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
-* Analytics of how, when and where users are logging in.
-* Pull data from other sources and add it to the user profile, through [JavaScript rules](https://docs.auth0.com/rules).
+👤 **Madusha Sandaruwan**
 
-## Create a free account in Auth0
+-   Github: [MadushaS](https://github.com/MadushaS)
+-   LinkedIn: [madusha_sandaruwan](https://linkedin.com/in/madushasandaruwan)
 
-1. Go to [Auth0](https://auth0.com) and click Sign Up.
-2. Use Google, GitHub or Microsoft Account to login.
 
-## Issue Reporting
+👤 **Yasindu Sanjeewa**
 
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+-   Github: [YSanj98](https://github.com/YSanj98)
+-   LinkedIn: [yasindu_sanjeewa](https://www.linkedin.com/in/yasindu-sanjeewa-a79783202)
 
-## Author
 
-[Auth0](https://auth0.com)
+👤 **Sachin Mihiranga**
 
-## License
+-   Github: [SachinMihiranga](https://github.com/SachinMihiranga)
+-   LinkedIn: [sachin_mihiranga](https://www.linkedin.com/in/sachin-mihiranga-644608255)
 
-This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
+
+👤 **Omali Fernando**
+
+-   Github: [Omali99](https://github.com/Omali99)
+-   LinkedIn: [omali_fernando](https://www.linkedin.com/in/omali-fernando-04723124a)
+
+👤 **Pivindi Nimanga**
+
+-   Github: [nimanga](https://github.com/nimanga-cs19019)
+-   LinkedIn: [pivindi_nimanga](https://www.linkedin.com/in/pivindi-nimanga-985713250)
+
+
+👤 **Dulana Dewmin**
+
+-   Github: [DulanaDewmin](https://github.com/DulanaDewmin)
+-   LinkedIn: [dulana_dewmin](https://www.linkedin.com/in/hewa-dehigahawaththage-dulana-dewmin-0788b21b9)
+
+
+---
