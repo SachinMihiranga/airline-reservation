@@ -33,6 +33,23 @@ public class UserTickets {
     @Field
     private String flightAirlineLogo;
 
+    public UserTickets(String ticketId, String userId, String flightId, String flightName, String flightDate, String flightTime, String flightFrom, String flightTo, String flightPrice, String flightSeats, String flightClass, String flightDuration, String flightAirline, String flightAirlineLogo) {
+        this.ticketId = ticketId;
+        this.userId = userId;
+        this.flightId = flightId;
+        this.flightName = flightName;
+        this.flightDate = flightDate;
+        this.flightTime = flightTime;
+        this.flightFrom = flightFrom;
+        this.flightTo = flightTo;
+        this.flightPrice = flightPrice;
+        this.flightSeats = flightSeats;
+        this.flightClass = flightClass;
+        this.flightDuration = flightDuration;
+        this.flightAirline = flightAirline;
+        this.flightAirlineLogo = flightAirlineLogo;
+    }
+
     public String getTicketId() {
         return ticketId;
     }

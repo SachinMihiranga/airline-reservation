@@ -1,38 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"
-      xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/header :: head(pageTitle=${title})}">
-</head>
+<html lang="en" class="dark" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head(pageTitle=${title})}"> </head>
+
 <body class="py-5">
+    <div th:replace="~{fragments/dashboard/components/nav :: mobile-nav}"></div>
+    <div class="flex mt-[4.7rem] md:mt-0">
+        <nav th:replace="~{fragments/dashboard/components/nav :: side-nav}"></nav>
 
-<div th:replace="~{fragments/dashboard/components/nav :: mobile-nav}"></div>
-<div class="flex mt-[4.7rem] md:mt-0">
-    <nav th:replace="~{fragments/dashboard/components/nav :: side-nav}"></nav>
-    <div class="content">
-        <div class="top-bar">
-            <nav th:replace="~{fragments/dashboard/components/top-bar :: breadcrumb}"></nav>
-            <div th:replace="~{fragments/dashboard/components/top-bar :: account-menu}"></div>
-        </div>
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Application</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Dashboard
+                        </li>
+                    </ol>
+                </nav>
 
-        <div class="grid grid-cols-12 gap-6">
-            <div class="col-span-12 2xl:col-span-9">
-                <div class="grid grid-cols-12 gap-6">
-                    <div th:replace="~{fragments/dashboard/components/overview :: overview}"></div>
-                    <div th:replace="~{fragments/dashboard/components/active-tickets :: active-tickets}"></div>
-                    <div th:replace="~{fragments/dashboard/components/new-ticket :: new-ticket}"></div>
+                <div class="intro-x dropdown w-8 h-8">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="prifle pic 1" th:src="@{/images/profile-1.jpg}" />
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">
+                                    Software Engineer
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]" />
+                            </li>
+                            <li>
+                                <a th:href="@{/dashboard/profile}" class="dropdown-item hover:bg-white/5">
+                                    <i data-lucide="user" class="w-4 h-4 mr-2"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/dashboard/settings}" class="dropdown-item hover:bg-white/5">
+                                    <i data-lucide="settings" class="w-4 h-4 mr-2"></i> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]" />
+                            </li>
+                            <li>
+                                <a th:href="@{/logout}" class="dropdown-item hover:bg-white/5">
+                                    <i data-lucide="toggle-right" class="w-4 h-4 mr-2"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-span-12 2xl:col-span-3">
-                <div class="2xl:border-l -mb-10 pb-10">
-                    <div class="2xl:pl-6 grid grid-cols-12 gap-x-6 2xl:gap-x-0 gap-y-6">
-                        <div th:replace="~{fragments/dashboard/components/important-note-panel :: important-notes}"></div>
-                        <div th:replace="~{fragments/dashboard/components/recent_activities :: recent-activities}"></div>
+
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-9">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div
+                            th:replace="~{fragments/dashboard/components/overview :: overview(stat1=${stat1},stat2=${stat2},stat3=${stat3},stat4=${stat4})}">
+                        </div>
+
+                        <div class="col-span-12 mt-8">
+                            <div class="intro-y flex items-center h-10">
+                                <h2 class="text-lg font-medium truncate mr-5">
+                                    Active tickets
+                                </h2>
+                            </div>
+                            <div class="mt-5">
+                                <div th:if="${active_tickets_count}">
+                                    <div class="intro-y" th:each="ticket : ${active_tickets}">
+                                        <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
+                                            <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
+                                                <img alt="airline" th:src="@{/images/profile-1.jpg}">
+                                            </div>
+                                            <div class="ml-4 mr-auto">
+                                                <div class="font-medium">Russell Crowe</div>
+                                                <div class="text-slate-500 text-xs mt-0.5">3 June 2020</div>
+                                            </div>
+                                            <a class="py-1 px-2 rounded-full text-xs bg-red-500 text-white cursor-pointer font-medium"
+                                                href="">Cancel</a>
+                                        </div>
+                                    </div>
+
+                                    <a href=""
+                                        class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-slate-400 dark:border-darkmode-300 text-slate-500">View
+                                        All</a>
+                                </div>
+                                <div th:unless="${active_tickets_count}">
+                                    <a
+                                        class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-slate-400 dark:border-darkmode-300 text-slate-500">
+                                        No active tickets to show
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div th:replace="~{fragments/dashboard/components/new-ticket :: new-ticket}"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 2xl:col-span-3">
+                    <div class="2xl:border-l -mb-10 pb-10">
+                        <div class="2xl:pl-6 grid grid-cols-12 gap-x-6 2xl:gap-x-0 gap-y-6">
+
+                            <div
+     class=" col-span-12 md:col-span-6 xl:col-span-12 xl:col-start-1 xl:row-start-1 2xl:col-start-auto
+                                2xl:row-start-auto mt-3">
+                                <div class="intro-x flex items-center h-10">
+                                    <h2 class="text-lg font-medium truncate mr-auto">
+                                        Important Notes
+                                    </h2>
+                                    <button data-carousel="important-notes" data-target="prev"
+                                        class="tiny-slider-navigator btn px-2 border-slate-300 text-slate-600 dark:text-slate-300 mr-2">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+                                    <button data-carousel="important-notes" data-target="next"
+                                        class="tiny-slider-navigator btn px-2 border-slate-300 text-slate-600 dark:text-slate-300 mr-2">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+                                </div>
+                                <div class="mt-5 intro-x">
+                                    <div class="box zoom-in">
+                                        <div class="tiny-slider" id="important-notes">
+
+                                            <div class="p-5" th:each="note : ${noteList}">
+                                                <div class="text-base font-medium truncate" th:text="${note.title}">
+                                                    Lorem Ipsum is simply dummy
+                                                    text
+                                                </div>
+                                                <div class="text-slate-400 mt-1" th:text="${note.elapsedTime}">20 Hours ago
+                                                </div>
+                                                <div class="text-slate-500 text-justify mt-1" th:text="${note.notes}">
+                                                    Lorem Ipsum is simply
+                                                    dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                                    been the industry's standard dummy text ever since the 1500s.
+                                                </div>
+                                                <div class="font-medium flex mt-5">
+                                                    <button type="button" class="btn btn-secondary py-1 px-2">
+                                                        View Notes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div th:replace="~{fragments/dashboard/components/recent_activities :: recent-activities}">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script th:replace="~{fragments/scripts :: script-app}"></script>
+    <script th:replace="~{fragments/scripts :: script-app}"></script>
 </body>
+
 </html>

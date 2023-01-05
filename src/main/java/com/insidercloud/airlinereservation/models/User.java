@@ -15,7 +15,7 @@ public class User {
     @Field
     private String email;
 
-    public User(){}
+    public User() {}
 
     public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
@@ -24,8 +24,9 @@ public class User {
     }
 
     @Override
-    public String toString(){
-        return String.format("User[id='%s',firstName='%s', lastName='%s', email='%s']",id,firstName,lastName,email);
+    public String toString() {
+        return String.format("User[id='%s',firstName='%s', lastName='%s', email='%s']", id,
+                firstName, lastName, email);
     }
 
     public String getEmail() {

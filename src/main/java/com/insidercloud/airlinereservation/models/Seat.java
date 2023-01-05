@@ -1,5 +1,8 @@
 package com.insidercloud.airlinereservation.models;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "seat")
 public class Seat {
     private String seatId;
     private String seatType;
@@ -15,7 +18,10 @@ public class Seat {
     private String seatWindow;
     private String seatMiddle;
 
-    public Seat(String seatId, String seatType, String seatStatus, String seatPrice, String seatAvailability, String seatClass, String seatNumber, String seatRow, String seatColumn, String seatFloor, String seatAisle, String seatWindow, String seatMiddle) {
+    public Seat(String seatId, String seatType, String seatStatus, String seatPrice,
+            String seatAvailability, String seatClass, String seatNumber, String seatRow,
+            String seatColumn, String seatFloor, String seatAisle, String seatWindow,
+            String seatMiddle) {
         this.seatId = seatId;
         this.seatType = seatType;
         this.seatStatus = seatStatus;
@@ -73,5 +79,74 @@ public class Seat {
 
     public String getSeatClass() {
         return seatClass;
+    }
+
+    public void setSeatClass(String seatClass) {
+        this.seatClass = seatClass;
+    }
+
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public String getSeatRow() {
+        return seatRow;
+    }
+
+    public void setSeatRow(String seatRow) {
+        this.seatRow = seatRow;
+    }
+
+    public String getSeatColumn() {
+        return seatColumn;
+    }
+
+    public void setSeatColumn(String seatColumn) {
+        this.seatColumn = seatColumn;
+    }
+
+    public String getSeatFloor() {
+        return seatFloor;
+    }
+
+    public void setSeatFloor(String seatFloor) {
+        this.seatFloor = seatFloor;
+    }
+
+    public String getSeatAisle() {
+        return seatAisle;
+    }
+
+    public void setSeatAisle(String seatAisle) {
+        this.seatAisle = seatAisle;
+    }
+
+    public String getSeatWindow() {
+        return seatWindow;
+    }
+
+    public void setSeatWindow(String seatWindow) {
+        this.seatWindow = seatWindow;
+    }
+
+    public String getSeatMiddle() {
+        return seatMiddle;
+    }
+
+    public void setSeatMiddle(String seatMiddle) {
+        this.seatMiddle = seatMiddle;
+    }
+
+    @Override
+    public String toString() {
+        return "Seat [seatAisle=" + seatAisle + ", seatAvailability=" + seatAvailability
+                + ", seatClass=" + seatClass + ", seatColumn=" + seatColumn + ", seatFloor="
+                + seatFloor + ", seatId=" + seatId + ", seatMiddle=" + seatMiddle + ", seatNumber="
+                + seatNumber + ", seatPrice=" + seatPrice + ", seatRow=" + seatRow + ", seatStatus="
+                + seatStatus + ", seatType=" + seatType + ", seatWindow=" + seatWindow + "]";
     }
 }
