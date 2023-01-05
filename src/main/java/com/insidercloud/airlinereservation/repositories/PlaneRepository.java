@@ -11,4 +11,10 @@ public interface PlaneRepository extends MongoRepository<Plane,String> {
     Plane update(Plane plane);
 
     Long update(List<Plane> planes);
+
+    Long delete(List<String> listIds);
+
+    List<Plane> findAll(List<String> listIds);
+
+    Long delete(String id);
 }
