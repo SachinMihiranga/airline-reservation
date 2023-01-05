@@ -1,6 +1,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<div class="col-span-12 mt-8" th:fragment="overview">
+<div class="col-span-12 mt-8" th:fragment="overview(stat1,stat2,stat3,stat4)">
     <div class="intro-y flex items-center h-10">
         <h2 class="text-lg font-medium truncate mr-5">
             General Report
@@ -16,7 +16,7 @@
                     <div class="flex">
                         <i data-lucide="plane" class="report-box__icon text-primary"></i>
                     </div>
-                    <div class="text-3xl font-medium leading-8 mt-6">4.710</div>
+                    <div class="text-3xl font-medium leading-8 mt-6" th:text="${stat1}"></div>
                     <div class="text-base text-slate-500 mt-1">Total planes</div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <i data-lucide="corner-right-up"
                            class="report-box__icon text-warning"></i>
                     </div>
-                    <div class="text-3xl font-medium leading-8 mt-6">3.721</div>
+                    <div class="text-3xl font-medium leading-8 mt-6" th:text="${stat2}"></div>
                     <div class="text-base text-slate-500 mt-1">Upcoming Fights today</div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="flex">
                         <i data-lucide="wind" class="report-box__icon text-primary"></i>
                     </div>
-                    <div class="text-3xl font-medium leading-8 mt-6">2.149</div>
+                    <div class="text-3xl font-medium leading-8 mt-6" th:text="${stat3}"></div>
                     <div class="text-base text-slate-500 mt-1">Active airlines</div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="flex">
                         <i data-lucide="user" class="report-box__icon text-warning"></i>
                     </div>
-                    <div class="text-3xl font-medium leading-8 mt-6">152</div>
+                    <div class="text-3xl font-medium leading-8 mt-6" th:text="${stat4}"></div>
                     <div class="text-base text-slate-500 mt-1">Active Users</div>
                 </div>
             </div>
