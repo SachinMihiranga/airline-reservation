@@ -1,5 +1,16 @@
 # Airline Reservation System 
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/madushas/airline-reservation/docker-image.yml)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/madushas/airline-reservation)](https://libraries.io/github/MadushaS/airline-reservation)
+[![GitHub issues](https://img.shields.io/github/issues/madushas/airline-reservation)](https://github.com/madushas/airline-reservation/issues)
+[![DeepSource](https://deepsource.io/gh/MadushaS/airline-reservation.svg/?label=active+issues&show_trend=true&token=nn1OYtL-R9ZnXO7bJQmapzzD)](https://deepsource.io/gh/MadushaS/airline-reservation/?ref=repository-badge)
+![GitHub](https://img.shields.io/github/license/madushas/airline-reservation)
+[![Website](https://img.shields.io/website?label=Live-demo&up_message=online&url=http%3A%2F%2Fmyplods.herokuapp.com%2F)](http://myplods.herokuapp.com/)
+![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m793515192-1e0ed5bd4c491afc85c8b1ab)
+
+![GitHub Repo stars](https://img.shields.io/github/stars/madushas/airline-reservation?style=social)
+![GitHub forks](https://img.shields.io/github/forks/madushas/airline-reservation?style=social)
+
 Airline reservation system is a full-stack Java application. 
 Technologies that use to project;
 
