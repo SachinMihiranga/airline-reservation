@@ -4,8 +4,8 @@ spring:
       client:
         registration:
           auth0:
-            client-id: 0WtQiyufnFqkAMgwRY6aGAKp4laErdj1
-            client-secret: w4ligVdT3KXBAmZFwysswHWyQsyDr1kXQv4iwH9NiF5nrykW6e1RIItCR8UlShVU
+            client-id: ---your client id---
+            client-secret: ---your client secret---
             scope:
               - openid
               - profile
@@ -13,4 +13,4 @@ spring:
         provider:
           auth0:
             # trailing slash is important!
-            issuer-uri: https://dev-z724twbw.us.auth0.com/
+            issuer-uri: https://{your-tanent-here}.us.auth0.com/
