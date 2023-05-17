@@ -35,3 +35,7 @@ build/
 ### VS Code ###
 .vscode/
 eclipse-formatter.xml
+
+### Environment variables ###
+/src/main/resources/application.properties
+/src/main/resources/application.yml
