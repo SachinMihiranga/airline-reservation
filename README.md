@@ -114,17 +114,16 @@ If you have found a bug or if you have a feature request, please report them at 
 -   Github: [MadushaS](https://github.com/MadushaS)
 -   LinkedIn: [madusha_sandaruwan](https://linkedin.com/in/madushasandaruwan)
 
+👤 **Sachin Mihiranga**
+
+-   Github: [SachinMihiranga](https://github.com/SachinMihiranga)
+-   LinkedIn: [sachin_mihiranga](https://www.linkedin.com/in/sachin-mihiranga-644608255)
 
 👤 **Yasindu Sanjeewa**
 
 -   Github: [YSanj98](https://github.com/YSanj98)
 -   LinkedIn: [yasindu_sanjeewa](https://www.linkedin.com/in/yasindu-sanjeewa-a79783202)
 
-
-👤 **Sachin Mihiranga**
-
--   Github: [SachinMihiranga](https://github.com/SachinMihiranga)
--   LinkedIn: [sachin_mihiranga](https://www.linkedin.com/in/sachin-mihiranga-644608255)
 
 
 👤 **Omali Fernando**
